@@ -9,14 +9,6 @@
                 <li class="nav-item">
                     <a class="nav-link {{ Request::segment(1) == '' ? 'active' : '' }}" aria-current="page" href="{{ route('home.index') }}">Home</a>
                 </li>
-                @role('admin')
-                    <li class="nav-item">
-                        <a class="nav-link {{ Request::segment(1) == 'users' ? 'active' : '' }}" aria-current="page" href="{{ route('users.index') }}">Users</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ Request::segment(1) == 'products' ? 'active' : '' }}" aria-current="page" href="{{ route('products.index') }}">Products</a>
-                    </li>
-                @endrole
             </ul>
             @cannot('admin')
                 <form method="GET" action="{{ route('home.pencarian') }}" class="d-flex mx-1 mb-3 mb-lg-0 mx-lg-4">

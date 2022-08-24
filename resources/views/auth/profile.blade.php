@@ -1,4 +1,6 @@
-@extends('layouts.app-master')
+@cannot('admin')
+    @extends('layouts.app-master')
+@endcannot
 @section('title', 'My Profile')
 
 @push('styles')

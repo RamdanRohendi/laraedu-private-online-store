@@ -1,8 +1,8 @@
-@extends('layouts.app-master')
+@extends('layouts.admin-master')
 @section('title', 'Form Product')
 
 @section('content')
-    <div class="card shadow my-3">
+    <div class="card shadow my-3 w-100">
         <div class="card-header">
             <div class="row">
                 <div class="col">

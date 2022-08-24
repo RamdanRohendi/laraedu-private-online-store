@@ -1,4 +1,4 @@
-<footer class="footer p-3 bg-secondary text-white">
+<footer class="footer p-3 bg-light border-top">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">

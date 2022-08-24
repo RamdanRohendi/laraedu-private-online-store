@@ -1,8 +1,8 @@
-@extends('layouts.app-master')
+@extends('layouts.admin-master')
 @section('title', 'Products')
 
 @section('content')
-    <div class="vh-100">
+    <div class="min-vh-100 w-100">
         <div class="card shadow my-3">
             <div class="card-header">
                 <div class="row">
@@ -53,7 +53,10 @@
                     { data: 'harga', name: 'harga' },
                     { data: 'stok', name: 'stok' },
                     { data: 'action', name: 'action', orderable: false, searchable: false }
-                ]
+                ],
+                fnDrawCallback: function(oSettings) {
+                    table_product.parent().addClass('overflow-auto');
+                }
             });
 
             $(document).on('click', '.btn-delete', function(e){

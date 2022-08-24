@@ -11,7 +11,7 @@
 @endpush
 
 @section('content')
-    <div class="container vh-100 pb-4 mt-5 pt-3 d-flex align-items-center justify-content-center">
+    <div class="container min-vh-100 pb-4 mt-5 pt-3 d-flex align-items-center justify-content-center">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-7">
                 <h2 class="mb-3 w-100 text-center">

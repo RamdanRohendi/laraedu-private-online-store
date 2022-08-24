@@ -1,8 +1,8 @@
-@extends('layouts.app-master')
+@extends('layouts.admin-master')
 @section('title', 'Users')
 
 @section('content')
-    <div class="vh-100">
+    <div class="min-vh-100 w-100">
         <div class="card shadow my-3">
             <div class="card-header">
                 <div class="row">
@@ -26,27 +26,6 @@
                             <th>Role</th>
                             <th>Action</th>
                         </thead>
-                        {{-- <tbody>
-                            @foreach($users as $user)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>
-                                        <img id="foto" class="" onerror="this.onerror=null;this.src='{{ asset('assets/img/default-profile.jpg') }}';" src="{{ asset($user->foto) }}" alt="foto-profile" width="75">
-                                    </td>
-                                    <td class="space-nowrap">{{ $user->username }}</td>
-                                    <td class="text-capitalize">{{ $user->role }}</td>
-                                    <td class="space-nowrap">
-                                        <a href="{{ route('users.show', $user->id) }}" class="btn btn-primary">Show</a>
-                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning">Edit</a>
-                                        <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody> --}}
                     </table>
                 </div>
             </div>
@@ -70,7 +49,10 @@
                     { data: 'username', name: 'username' },
                     { data: 'role', name: 'role' },
                     { data: 'action', name: 'action', orderable: false, searchable: false }
-                ]
+                ],
+                fnDrawCallback: function(oSettings) {
+                    table_user.parent().addClass('overflow-auto');
+                }
             });
 
             $(document).on('click', '.btn-delete', function(e){

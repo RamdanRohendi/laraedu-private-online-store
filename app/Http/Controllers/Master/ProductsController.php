@@ -27,8 +27,10 @@ class ProductsController extends Controller
             })
             ->addColumn('action', function($product){
                 $btn = '
-                    <a href="'.route('products.edit', $product->id).'" class="btn btn-warning">Edit</a>
-                    <a href="'.route('products.destroy', $product->id).'" data-csrf="'.csrf_token().'" class="btn btn-danger btn-delete">Delete</a>
+                    <div class="text-nowrap">
+                        <a href="'.route('products.edit', $product->id).'" class="btn btn-warning">Edit</a>
+                        <a href="'.route('products.destroy', $product->id).'" data-csrf="'.csrf_token().'" class="btn btn-danger btn-delete">Delete</a>
+                    </div>
                 ';
 
                 return $btn;

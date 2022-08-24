@@ -2,7 +2,7 @@
 @section('title', 'Home')
 
 @section('content')
-    <div class="vh-100">
+    <div class="min-vh-100">
         <p class="mt-5">Hasil Pencarian Untuk <b>{{ @$keyword }}</b></p>
 
         <div class="p-4 row justify-content-start">

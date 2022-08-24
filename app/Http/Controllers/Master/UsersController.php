@@ -28,9 +28,11 @@ class UsersController extends Controller
             })
             ->addColumn('action', function($user){
                 $btn = '
+                <div class="text-nowrap">
                     <a href="'.route('users.show', $user->id).'" class="btn btn-primary">Show</a>
                     <a href="'.route('users.edit', $user->id).'" class="btn btn-warning">Edit</a>
                     <a href="'.route('users.destroy', $user->id).'" data-csrf="'.csrf_token().'" class="btn btn-danger btn-delete">Delete</a>
+                </div>
                 ';
 
                 return $btn;
