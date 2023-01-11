@@ -55,7 +55,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $product->nama }}</h5>
                         <p class="card-text">
-                            {{ $product->keterangan }} <br>
+                            {{-- {{ $product->keterangan }} <br> --}}
                             <small>Rp{{ number_format($product->harga) }}</small>
                         </p>
                         <a href="javascript: void(0);" class="btn btn-primary">Lihat Detail</a>
